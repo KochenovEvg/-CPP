@@ -3,7 +3,7 @@
 using namespace std;
 int main()
 {
-  int i, j, n, m;
+  int i, j, n, m, a, count, count_0;
   cout << "Enter N" << endl;
   cin >> n;
   cout << "Enter M" << endl;
@@ -14,6 +14,7 @@ int main()
       for (i = 0; i < n; i++)
         arr[i] = new char[m];
   //array
+  //full
   for(i = 0; i < n; i++)
     {
       for(j = 0; j < m; j++)
@@ -26,6 +27,26 @@ int main()
       cout << endl;
       cout << endl;
     }
+  //full
+  for(a = 0; a < 1000; a++)
+  {
+    count = 0;
+    for(i = 0; i < n; i++)
+      {
+        for(j = 0; j < m; j++)
+        {
+          if(arr[i][j] == a)
+          {
+            count_0 = count;
+            count = count + 1;
+            if(count_0 + 1 == count )
+            cout << arr[i][j] << ": " << count << endl;
+          }
+        }
+      }
+  }
+
+
   for(i = 0; i < n; i++)
     delete []arr[i];
   delete []arr;
