@@ -18,9 +18,12 @@ int main()
     {
       for(j = 0; j < m; j++)
       {
-        arr[i][j] = 65+ rand() %90;
-        cout << arr[i][j] << "  ";
+        cout << "    ";
+        arr[i][j] = rand() %90 +65;
+        cout << arr[i][j];
       }
+
+      cout << endl;
       cout << endl;
     }
   for(i = 0; i < n; i++)
