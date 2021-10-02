@@ -10,7 +10,7 @@ int main()
   t = 1 + rand() % 50;
   cout << "length of line = " << t << endl;
   //p — переменная рандома
-  for(i = 0; i <= t; i++)
+  for(i = 0; i < t; i++)
   {
     p = 1 + rand() % 3;
     switch(p)
