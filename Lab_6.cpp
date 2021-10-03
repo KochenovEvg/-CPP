@@ -10,7 +10,7 @@ int main()
   t = 1 + rand() % 50;
   cout << "length of line = " << t << endl;
   //p — переменная рандома
-  for(i = 0; i < t; i++)
+  for(i = 0; i <= t; i++)
   {
     p = 1 + rand() % 3;
     switch(p)
@@ -18,22 +18,21 @@ int main()
       case 1:
       str[i] = rand() % 4 + 43;
       cout << str[i];
+      break;
       case 2:
       str[i] = rand() % 10 + 48;
       cout << str[i];
+      break;
       case 3:
       str[i] = rand() % 26 + 65;
       cout << str[i];
+      break;
     }
   }
+
   cout << endl;
+  
+
   system("pause");
   return 0;
 }
-
-//case 1:
-//str[i] = rand() % 4 + 43;
-//case 2:
-//str[i] = rand() % 10 + 48;
-//case 3:
-//str[i] = rand() % 26 + 65;
