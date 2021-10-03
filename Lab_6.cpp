@@ -8,7 +8,7 @@ int main()
   srand(time(0));
   //t — length of str
   t = 1 + rand() % 50;
-  cout << "length of line = " << t << endl;
+  cout << "length of line = " << t + 1 << endl;
   //p — переменная рандома
   for(i = 0; i <= t; i++)
   {
@@ -31,7 +31,14 @@ int main()
   }
 
   cout << endl;
-  
+
+  for(i = 0; i <=t; i++)
+  {
+      if(str[i] <= 57 && str[i] >= 48)
+      cout << str[i];
+      else cout << endl;
+  }
+  cout << endl;
 
   system("pause");
   return 0;
