@@ -3,7 +3,8 @@
 using namespace std;
 int main()
 {
-  int i, j, t, p, v, q;
+  int i, j, t, p;
+  char q[50];
   char str[50];
   srand(time(0));
   //t — length of str
@@ -31,15 +32,33 @@ int main()
   }
 
   cout << endl;
-
-  for(i = 0; i <=t; i++)
+  if (str[0] <= 57 && str[0] >= 48)
+  cout << str[0];
+  else cout << "";
+  for(i = 1; i <= t; i++)
   {
-      if(str[i] <= 57 && str[i] >= 48)
-      cout << str[i];
-      else cout << endl;
+    if(str[i] <= 57 && str[i] >= 48)
+    cout << str[i];
+    else cout<<"";
+    
+    if(str[i+1] <= 57 && str[i+1] >= 48)
+    cout << "; ";
+    else cout << "";
   }
   cout << endl;
 
   system("pause");
   return 0;
 }
+
+
+// if(str[0] <= 57 && str[0] >= 48)
+// cout << str[0];
+// for(i = 1; i <=t; i++)
+// {
+//     if(str[i] <= 57 && str[i] >= 48 )
+//     cout << str[i];
+//     else if(str[i+1] <= 57 && str[i+1] >= 48)
+//     cout << ", ";
+// }
+// cout << endl;
