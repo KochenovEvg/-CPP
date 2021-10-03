@@ -29,23 +29,30 @@ int main()
       break;
     }
   }
+  cout << endl;
   for(i = 0; i <= t; i++)
   {
-    if(str[i] <= 57 && str[i] >= 48)
+    if(str[i] >= 48 && str[i] <= 57) cout << str[i];
+    else
     {
-      cout << endl;
-      if(str[0] <= 57 && str[0] >= 48)
-      cout << str[0];
-      for(i = 1; i <=t; i++)
-      {
-          if(str[i] <= 57 && str[i] >= 48 )
-          cout << str[i];
-          else if(str[i+1] <= 57 && str[i+1] >= 48)
-          cout << ", ";
-      }
+      str[i] = 0;
     }
   }
-    cout << endl;
+  cout << endl;
+
+
+  for(i = 0; i <= t; i++)
+  {
+    if(str[i] == 0)
+    cout << "";
+    else
+    {
+      if (str[i+1] == 0)
+      cout << str[i] << "; ";
+      else cout << str[i];
+    }
+  }
+  cout << endl;
 
   system("pause");
   return 0;
