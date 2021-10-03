@@ -56,7 +56,13 @@ int main()
     {
       if (str[i+1] == 0)
       cout << str[i] << "; ";
-      else cout << str[i];
+      else
+      {
+        if(str[i] < str[i+1])
+        cout << str[i] << "; ";
+        else 
+        cout << str[i];
+      }
     }
   }
   cout << endl;
