@@ -58,7 +58,7 @@ int main()
       cout << str[i] << "; ";
       else
       {
-        if(str[i] < str[i+1] && str[i] == 0)
+        if( str[i] == 0 || str[i] < str[i+1])
         cout << str[i] << "; ";
         else
         cout << str[i];
