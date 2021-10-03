@@ -4,10 +4,10 @@ using namespace std;
 int main()
 {
   int i, j, t, p, q;
-  char str[50];
+  char str[100];
   srand(time(0));
   //t — length of str
-  t = 1 + rand() % 50;
+  t = 1 + rand() % 100;
   cout << "length of line = " << t + 1 << endl;
   //p — переменная рандома
   for(i = 0; i <= t; i++)
@@ -32,15 +32,22 @@ int main()
   cout << endl;
   for(i = 0; i <= t; i++)
   {
-    if(str[i] >= 48 && str[i] <= 57) cout << str[i];
+    if(str[i] >= 48 && str[i] <= 57) continue;
     else
     {
       str[i] = 0;
     }
+
+    if(str[i] == 0)
+    cout << "";
+    else
+    {
+      if (str[i+1] == 0)
+      cout << str[i] << "; ";
+      else cout << str[i];
+    }
   }
-  cout << endl;
-
-
+  cout << "Whole numbers : ";
   for(i = 0; i <= t; i++)
   {
     if(str[i] == 0)
