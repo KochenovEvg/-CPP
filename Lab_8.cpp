@@ -24,24 +24,21 @@ float func(float x)
 
 float row(float x, float e)
 {
-    float r, p;
-    int k;
-    r =(x*x)/8;
-    cout << "r(" << 2 << ")=" << r << endl;
-    k = 3;
-    cout << "Progress" << endl;
-    while(r > e)
+    float r, p, k;
+    r =(x*x)/8.0;
+    cout << "r" << 2 <<" = " << r << endl;
+    for(k = 3; abs(r) > e ; k++)
     {
-      p = -1 * (x * (2*k - 3))/(2*k);
-      r = r*p; 
-      cout << "r(" << k << ")=" << r << endl;
-      k++;
+      p = -(x*(2 * k - 3)/(2*k));
+      r = r*p;
+      cout << "p" << k <<" = " << p << "\t";
+      cout << "r" << k <<" = " << r << endl;
     }
     return r;
 }
 int main()
 {
-  float e = 0.001, h = 0.1, a = -0.9, b = 0.9, i;
+  float e = 0.0001, h = 0.1, a = -0.9, b = 0.9, i;
   cout << "a = " << a << endl;
   cout << "b = " << b << endl;
   cout << "h = " << h << endl;
