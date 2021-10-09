@@ -15,16 +15,19 @@ int main()
     cout << str[i];
   }
   cout << endl;
-    for(i = t; i > 0; i--)
+  for(j = 0; j < t; j++)
+  {
+    for(i = 0; i < t; i++)
     {
       if(str[i] <= 57 && str[i] >= 48)
       {
-        if(str[i+1]<= 57 && str[i+1] >= 48) continue;
+        if(str[i-1]<= 57 && str[i-1] >= 48) continue;
         q = str[i-1];
-        str[i-1] = str [i];
+        str[i-1] = str[i];
         str[i] = q;
       }
     }
+  }
   for(i = 0; i < t; i++)
   {
     cout << str[i];
